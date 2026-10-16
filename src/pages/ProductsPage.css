@@ -1,0 +1,215 @@
+.products-toolbar {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.products-count {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Quick filters bar: price, rating, discount, stock and the sort order */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.bar-label {
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+.filter-bar .input-field {
+  padding: 0.45rem 0.65rem;
+  font-size: 0.9rem;
+  width: auto;
+}
+
+.bar-price {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: var(--text-small);
+}
+
+.bar-price .input-field {
+  width: 84px;
+}
+
+.bar-select,
+.sort-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bar-check {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.bar-check input {
+  accent-color: var(--accent);
+  width: 1rem;
+  height: 1rem;
+}
+
+.bar-clear {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+.bar-end {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: auto;
+}
+
+.filters-toggle {
+  white-space: nowrap;
+}
+
+.filters-toggle {
+  display: none;
+}
+
+.products-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.filters {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  top: 120px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.filter-group h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+}
+
+.filter-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  padding: 0.45rem 0.6rem;
+  border-radius: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+.filter-option span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.filter-option:hover {
+  background: var(--bg-color);
+}
+
+.filter-option.active {
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--accent-hover);
+  font-weight: 600;
+}
+
+.results-loading {
+  opacity: 0.5;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+@media (max-width: 800px) {
+  .products-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .bar-end {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .bar-end .sort-label {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .bar-end .sort-label select {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .filters-toggle {
+    display: inline-flex;
+  }
+
+  .filters {
+    display: none;
+    position: static;
+  }
+
+  .filters.open {
+    display: flex;
+  }
+}
+
+/* Checkbox and radio filters (brand, rating, discount, stock) */
+.filter-check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 0.4rem;
+}
+
+.filter-check:hover {
+  background: var(--bg-color);
+}
+
+.filter-check input {
+  accent-color: var(--accent);
+  width: 1rem;
+  height: 1rem;
+}
+
+.filter-check span {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.filter-group .btn-link {
+  align-self: flex-start;
+  margin: 0.2rem 0.6rem 0;
+}

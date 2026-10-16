@@ -1,0 +1,255 @@
+.cart-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.cart-items {
+  list-style: none;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 96px 1fr auto;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-image {
+  width: 96px;
+  height: 96px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.cart-item-image .product-image-fallback {
+  font-size: 0.6rem;
+}
+
+.cart-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.cart-item-title {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.cart-item-title:hover {
+  color: var(--accent-hover);
+}
+
+.cart-item-price {
+  font-size: var(--text-small);
+  color: var(--text-muted);
+}
+
+.cart-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.4rem;
+}
+
+.cart-remove {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--text-muted);
+}
+
+.cart-remove:hover {
+  color: var(--error);
+}
+
+.cart-item-total {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.cart-summary {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  position: sticky;
+  top: 120px;
+}
+
+.cart-summary h2 {
+  font-size: 1.2rem;
+}
+
+.cart-summary .alert {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-summary {
+    position: static;
+  }
+}
+
+@media (max-width: 520px) {
+  .cart-item {
+    grid-template-columns: 72px 1fr;
+  }
+
+  .cart-item-image {
+    width: 72px;
+    height: 72px;
+  }
+
+  .cart-item-total {
+    grid-column: 2;
+  }
+}
+
+.cart-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0;
+}
+
+.cart-item.unavailable .cart-item-image,
+.cart-item.unavailable .price-tag {
+  opacity: 0.5;
+}
+
+.cart-item-seller {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.cart-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--text-muted);
+}
+
+.cart-action:hover {
+  color: var(--primary);
+}
+
+.cart-empty-note {
+  padding: 1.5rem;
+  color: var(--text-muted);
+}
+
+.saved-section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.free-delivery-hint {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: #b45309;
+  background: #fffbeb;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.75rem;
+}
+
+.free-delivery-hint.ok {
+  color: #047857;
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.summary-row.discount {
+  color: var(--accent-hover);
+  font-weight: 600;
+}
+
+.coupon-box {
+  border-top: 1px solid var(--border);
+  padding-top: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.coupon-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.coupon-form .input-field {
+  padding: 0.55rem 0.75rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.coupon-applied {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px dashed var(--accent);
+  border-radius: 0.5rem;
+  background: rgba(16, 185, 129, 0.05);
+  font-size: var(--text-small);
+}
+
+.coupon-applied svg {
+  color: var(--accent-hover);
+}
+
+.coupon-applied div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.coupon-applied span {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.offer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.offer-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.offer-code {
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  border: 1px dashed var(--border-focus);
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.4rem;
+  white-space: nowrap;
+}
+
+.offer-text {
+  flex: 1;
+  color: var(--text-muted);
+}

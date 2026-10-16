@@ -1,0 +1,18 @@
+# Render Blueprint for the storefront: built once, then served as static files.
+# Deploy the backend first (its own render.yaml), then point VITE_API_URL at it.
+
+services:
+  - type: web
+    name: shoyo-web
+    runtime: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite # Let React Router handle paths like /products/3
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        sync: false # The API's URL plus /api/v1, e.g. https://shoyo-api.onrender.com/api/v1
+      - key: VITE_ADMIN_URL
+        sync: false # The admin panel's URL, e.g. https://shoyo-admin.onrender.com

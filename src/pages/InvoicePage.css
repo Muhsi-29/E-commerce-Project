@@ -1,0 +1,123 @@
+.invoice-page {
+  max-width: 860px;
+}
+
+.invoice-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.invoice-toolbar .btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.invoice {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.invoice-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 1rem;
+}
+
+.invoice-meta p {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  font-size: var(--text-small);
+}
+
+.invoice-meta span {
+  color: var(--text-muted);
+}
+
+.invoice-parties {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.invoice-parties h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.invoice-table th,
+.invoice-table td {
+  padding: 0.6rem;
+  text-align: right;
+  border-bottom: 1px solid var(--border);
+}
+
+.invoice-table th:first-child,
+.invoice-table td:first-child {
+  text-align: left;
+}
+
+.invoice-table thead th {
+  background: #f1f5f9;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.invoice-table tfoot td {
+  border-bottom: none;
+  color: var(--text-muted);
+}
+
+.invoice-table tfoot .grand td {
+  color: var(--text-main);
+  font-weight: 800;
+  font-size: 1rem;
+  border-top: 2px solid var(--primary);
+}
+
+@media (max-width: 600px) {
+  .invoice {
+    padding: 1.25rem;
+  }
+
+  .invoice-parties {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Printing: only the invoice */
+@media print {
+  .main-header,
+  .footer-container,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+  }
+
+  .invoice {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+}

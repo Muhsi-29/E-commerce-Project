@@ -1,0 +1,260 @@
+.orders-page {
+  max-width: 960px;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.order-card {
+  overflow: hidden;
+}
+
+.order-card.highlight {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+.order-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  padding: 1rem 1.25rem;
+  background: #f8fafc;
+  border-bottom: 1px solid var(--border);
+}
+
+.order-header div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.order-header span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.order-header strong {
+  font-size: 0.95rem;
+}
+
+.order-payment {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.order-header .order-number {
+  margin-left: auto;
+  align-items: flex-end;
+  gap: 0.35rem;
+}
+
+.order-items {
+  list-style: none;
+  padding: 0.5rem 1.25rem;
+}
+
+.order-items li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.order-items li:last-child {
+  border-bottom: none;
+}
+
+.order-item-image {
+  width: 64px;
+  height: 64px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #f1f5f9;
+}
+
+.order-item-image .product-image-fallback {
+  font-size: 0;
+}
+
+.order-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.order-item-info a {
+  color: var(--text-main);
+}
+
+.order-item-info a:hover {
+  color: var(--accent-hover);
+}
+
+.order-item-info span {
+  font-size: var(--text-small);
+  color: var(--text-muted);
+}
+
+.order-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.85rem 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.order-address {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--text-small);
+  color: var(--text-muted);
+}
+
+.order-footer > button,
+.order-confirm {
+  margin-left: auto;
+}
+
+.order-confirm {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--text-small);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .order-header .order-number {
+    margin-left: 0;
+    align-items: flex-start;
+  }
+}
+
+.order-banner {
+  padding: 0.6rem 1.25rem;
+  background: #fffbeb;
+  color: #92400e;
+  font-size: var(--text-small);
+  font-weight: 600;
+}
+
+/* One block per seller */
+.shipment {
+  padding: 1rem 1.25rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.shipment-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.shipment .order-items {
+  padding: 0;
+}
+
+.order-item-actions {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.return-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.return-requested { color: #b45309; }
+.return-refunded { color: var(--accent-hover); }
+.return-rejected { color: var(--error); }
+
+.return-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  max-width: 420px;
+}
+
+.return-form .input-field {
+  padding: 0.5rem 0.65rem;
+  font-size: var(--text-small);
+}
+
+.return-form-actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.rate-seller {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-size: var(--text-small);
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+.rate-seller .star-input svg {
+  width: 20px;
+  height: 20px;
+}
+
+.order-footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.order-money {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.order-money .refunded {
+  color: var(--accent-hover);
+}
+
+.order-footer-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .order-items li {
+    flex-wrap: wrap;
+  }
+
+  .order-item-actions {
+    margin-left: 0;
+    align-items: flex-start;
+  }
+}

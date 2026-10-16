@@ -1,0 +1,443 @@
+/* Shared by the account, wishlist, addresses, password, seller, store, help and contact pages */
+
+.account-page {
+  max-width: 1080px;
+}
+
+.page-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.confirm-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--text-small);
+  font-weight: 600;
+}
+
+.block-link {
+  display: block;
+  margin-top: 1rem;
+}
+
+/* Account overview */
+.account-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.account-link {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1.1rem 1.25rem;
+  color: var(--text-main);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.account-link:hover {
+  border-color: var(--accent);
+  color: var(--text-main);
+  transform: translateY(-1px);
+}
+
+.account-link > svg {
+  color: var(--accent-hover);
+  flex-shrink: 0;
+}
+
+.account-link div {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-link strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.account-link span {
+  font-size: var(--text-small);
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.account-forms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.account-form {
+  padding: 1.5rem;
+}
+
+.account-form h2 {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.input-field:disabled {
+  color: var(--text-muted);
+  background: #f1f5f9;
+}
+
+/* Wishlist */
+.wishlist-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.wishlist-item {
+  display: flex;
+  overflow: hidden;
+}
+
+.wishlist-image {
+  width: 110px;
+  flex-shrink: 0;
+  background: #fff;
+  border-right: 1px solid var(--border);
+}
+
+.wishlist-body {
+  flex: 1;
+  min-width: 0;
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.wishlist-title {
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.wishlist-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+
+/* Saved addresses */
+.address-editor {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.address-editor h2 {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.address-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.address-card {
+  padding: 1.1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.address-card.default {
+  border-color: var(--accent);
+}
+
+.address-card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.address-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.4rem;
+}
+
+.address-card-actions .btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.address-label {
+  display: inline-block;
+  padding: 0 0.45rem;
+  border-radius: 999px;
+  background: #f1f5f9;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+/* Narrow single-card pages (passwords) */
+.narrow-page {
+  max-width: 460px;
+  padding-top: 3rem;
+}
+
+.narrow-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.narrow-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.narrow-card .input-group {
+  margin-bottom: 0;
+}
+
+.narrow-icon {
+  color: var(--accent);
+}
+
+/* Help and policy pages */
+.info-page {
+  max-width: 820px;
+}
+
+.info-content {
+  padding: 2rem;
+  line-height: 1.7;
+}
+
+.info-content h2 {
+  font-size: 1.15rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.info-content h2:first-child {
+  margin-top: 0;
+}
+
+.info-content ul {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.info-content p + p {
+  margin-top: 0.6rem;
+}
+
+.info-nav {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.info-nav a {
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: var(--text-small);
+  color: var(--text-muted);
+  background: var(--surface);
+}
+
+.info-nav a.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.contact-aside {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.contact-aside div {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.contact-aside svg {
+  color: var(--accent-hover);
+  flex-shrink: 0;
+}
+
+@media (max-width: 800px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Sell on Shoyo and store pages */
+.sell-hero {
+  padding: 2.5rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, var(--primary) 0%, #134e4a 100%);
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.sell-hero h1 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.sell-hero p {
+  color: #cbd5e1;
+  max-width: 620px;
+}
+
+.sell-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.sell-step {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.sell-step svg {
+  color: var(--accent-hover);
+}
+
+.sell-step span {
+  font-size: var(--text-small);
+  color: var(--text-muted);
+}
+
+.sell-form {
+  padding: 1.75rem;
+  max-width: 760px;
+}
+
+.sell-form h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.sell-form h3 {
+  font-size: 1rem;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.sell-status {
+  padding: 1.75rem;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.store-header {
+  padding: 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.store-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, var(--accent) 0%, #047857 100%);
+  color: white;
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.store-header div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.store-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  font-size: var(--text-small);
+  color: var(--text-muted);
+}
+
+.form-actions.start {
+  justify-content: flex-start;
+}
+
+.store-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.store-products-title {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.sell-form .alert svg {
+  vertical-align: -3px;
+}
